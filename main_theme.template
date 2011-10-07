@@ -21,6 +21,7 @@ http://creativecommons.org/licenses/by-nc-sa/3.0/
 	<title>{block:PostTitle}{PostTitle} | {/block:PostTitle}Comedy Corner Underground a Minneapolis Comedy Club run by Comics</title>
 	{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
 	<link rel="shortcut icon" href="{Favicon}" />
+	<link rel="canonical" href="{Permalink}"/>
   <link rel="alternate" type="application/rss+xml" href="{RSS}" />
   <meta name="color:Header Background" content="#000000" />
   <meta name="color:Header Text" content="#FFFFFF" />
@@ -33,7 +34,6 @@ http://creativecommons.org/licenses/by-nc-sa/3.0/
   <meta name="if:Dark Layout" content="0" />
   <meta name="text:Typekit Code" content=""/>
   <meta name="text:Disqus Shortname" content="" />
-  <meta name="google-site-verification" content="FYf8M-xMkPpNGL9RCJ5chr-RMyACOMPuSpu-Lp0ABGg" />
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 	<link rel="stylesheet" href="http://static.tumblr.com/usaykzx/o8Bku9w35/reset.css" type="text/css" />
 	<style type="text/css">
@@ -176,11 +176,16 @@ font-weight:bold;
         color: {color:Post Headers};
         overflow: hidden;
       }
-        .post h3 a {
+      
+	  .post h3 a {
           color: {color:Post Headers};
           text-decoration: none;
-        }
-        
+		  }
+
+       .share_buttons {
+		margin-bottom: .75em;
+	   }
+
         
       .post-meta {
         margin-top: 10px;
@@ -542,24 +547,17 @@ font-weight:bold;
 
 </script>
 
-
-
 </head>
-
-
 <body>
-	
 	<div id="container">
-		
 		<div id="header">
-			
 			<h1>
-                            <a href="/">{Title}</a>
-                            <div style="clear:left;"/>
-                        </h1>
+                 <a href="/">{Title}</a>
+                 <div style="clear:left;"/>
+			</h1>
                         
 			<h2>{Description}</h2>
-			
+
 			{block:HasPages}
 				<h2 style="margin-top:10px; font-size:1.3em">
 					{block:Pages}<a href="{URL}">{Label}</a>&nbsp;&nbsp;{/block:Pages}
@@ -573,11 +571,9 @@ font-weight:bold;
 		
 		<div id="content"{block:PermalinkPage} class="single"{/block:PermalinkPage}>
 		<br/>
-			{block:IndexPage}<div class="hellyeah">{/block:IndexPage}
-			
-
-
-			{block:Posts}
+		{block:IndexPage}<div class="hellyeah">{/block:IndexPage}
+		
+		{block:Posts}
 			
         {block:Photo}
 
@@ -682,8 +678,13 @@ font-weight:bold;
         
         {block:PermalinkPage}
             {block:Text}
- <div class="post">
+			<div class="post">
             {block:Title}<h3><a href="{Permalink}">{Title}</a></h3>{/block:Title}
+			<div class="share_buttons">
+				<g:plusone size="small"></g:plusone>
+				<a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="theccu">Tweet</a>
+				<script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+			</div>
             <div class="text">{Body}</div>
             <div class="post-meta">
               <span class="post-meta-left"><a href="{Permalink}"></a></span>
@@ -698,6 +699,17 @@ font-weight:bold;
                 <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">{lang:View the discussion thread}</a></noscript>
                 {/block:Permalink}
               {/block:IfDisqusShortname}
+			  <!-- This is for the g+ stuff -->
+			  <script type="text/javascript">
+				(function() {
+								var po = document.createElement('script'); 
+								po.type = 'text/javascript'; 
+								po.async = true;
+								po.src = 'https://apis.google.com/js/plusone.js';
+								var s = document.getElementsByTagName('script')[0]; 
+								s.parentNode.insertBefore(po, s);
+						})();
+				</script>
             {/block:PermalinkPage}
           </div>
             {/block:Text}
