@@ -1,0 +1,840 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+Chunky Theme 1.3 by Sleepover.
+Released under Creative Commons Attribution-Noncommercial-Share Alike 3.0 Unported License
+http://creativecommons.org/licenses/by-nc-sa/3.0/
+
+<img src="http://i12.photobucket.com/albums/a205/runawaybucket/corner%20bar%20pics/Picture14.png" width="400">
+
+ .|'''.|  '||                                                            
+ ||..  '   ||    ....    ....  ... ...    ...   .... ...   ....  ... ..  
+  ''|||.   ||  .|...|| .|...||  ||'  || .|  '|.  '|.  |  .|...||  ||' '' 
+.     '||  ||  ||      ||       ||    | ||   ||   '|.|   ||       ||     
+|'....|'  .||.  '|...'  '|...'  ||...'   '|..|'    '|     '|...' .||.    
+                                ||                                       
+                               ''''  sleepoversf.com
+-->
+	
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>{block:PostTitle}{PostTitle} | {/block:PostTitle}Comedy Corner Underground a Minneapolis Comedy Club run by Comics</title>
+	{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+	<link rel="shortcut icon" href="{Favicon}" />
+  <link rel="alternate" type="application/rss+xml" href="{RSS}" />
+  <meta name="color:Header Background" content="#000000" />
+  <meta name="color:Header Text" content="#FFFFFF" />
+  <meta name="color:Header Shadow" content="#000000" />
+  <meta name="color:Header Shadow Alt" content="#D1EB78" />
+  <meta name="color:Description Text" content="#D1EB78" />
+  <meta name="color:Post Headers" content="#FFFFFF" />
+  <meta name="color:Content Background" content="#D1EB78" />
+  <meta name="if:Drop Shadows on Post Headers" content="1" />
+  <meta name="if:Dark Layout" content="0" />
+  <meta name="text:Typekit Code" content=""/>
+  <meta name="text:Disqus Shortname" content="" />
+  <meta name="google-site-verification" content="FYf8M-xMkPpNGL9RCJ5chr-RMyACOMPuSpu-Lp0ABGg" />
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<link rel="stylesheet" href="http://static.tumblr.com/usaykzx/o8Bku9w35/reset.css" type="text/css" />
+	<style type="text/css">
+    body {
+      {block:IfNotDarkLayout}
+        color: #333;
+    		color: rgba(0,0,0,.9);
+      {/block:IfNotDarkLayout}
+      {block:IfDarkLayout}
+        color: #fcfcfc;
+        color: rgba(255,255,255,.9);
+      {/block:IfDarkLayout}
+  		background: {color:Content Background};
+  		font-family: "Century Schoolbook", Century, Georgia, serif;
+  		text-shadow: 0 0 1px {color:Content Background};
+  	}
+  
+    a:link,a:visited {
+      {block:IfNotDarkLayout}
+  		  color: #999999;
+text-decoration:none;
+font-weight:bold;
+		  {/block:IfNotDarkLayout}
+		  {block:IfDarkLayout}
+        color: #999999;
+text-decoration:none;
+font-weight:bold;
+		  {/block:IfDarkLayout}
+    }
+  	a:link,a:visited {
+  		{block:IfNotDarkLayout}
+    		color: #999999;
+font-weight:bold;
+text-decoration:none;
+      {/block:IfNotDarkLayout}
+      {block:IfDarkLayout}
+        color: #999999;
+text-decoration:none;
+font-weight:bold;
+      {/block:IfDarkLayout}
+  	}
+  	a:hover {
+  	  {block:IfNotDarkLayout}
+  	    color: red;
+font-weight:bold;
+
+      {/block:IfNotDarkLayout}
+      {block:IfDarkLayout}
+        color: red;
+font-weight:bold;
+
+      {/block:IfDarkLayout}
+    }
+  	a:hover {
+  	  {block:IfNotDarkLayout}
+    		color: red;
+      {/block:IfNotDarkLayout}
+      {block:IfDarkLayout}
+        color: red;
+      {/block:IfDarkLayout}
+    }
+  	
+  	.clear {
+  		clear: both;
+  	}
+    
+    #header {
+      background: {color:Header Background};
+      padding: 30px 50px;
+      text-align: center;
+    }
+    #header h1 {
+      margin-bottom: .5em;
+    }
+      #header h1 a {
+        font-family: "chunk-1","chunk-2", "Rockwell", "American Typewriter", Georgia, serif;
+        font-weight: bold;
+        font-size: 5.4em;
+        text-shadow: 2px 2px 0 {color:Header Shadow}, 3px 3px 0 {color:Header Shadow Alt}, 4px 4px 0 {color:Header Shadow}, 5px 5px 0 {color:Header Shadow Alt};
+        text-transform: uppercase;
+        letter-spacing: 10px;
+        color: {color:Header Text};
+        text-decoration: none;
+      }
+    #header h2 {
+      font-family: "chunk-1","chunk-2", "Rockwell", "American Typewriter", Georgia, serif;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 2em;
+      color: {color:Description Text};
+      letter-spacing: 5px;
+  		text-shadow: 0 0 1px {color:Header Background};
+  		line-height: 1.5;
+    }
+      #header h2 a {
+        color: {color:Description Text};
+        text-decoration: none;
+        border-bottom: 2px solid {color:Description Text};
+      }
+  
+    #content {
+      width: 900px;
+      margin: 0 auto;
+      padding: 50px 0 50px 50px;
+    }
+    
+    .post {
+      width: 250px;
+      float: left;
+      margin: 0 50px 20px 0;
+      {block:IfNotDarkLayout}
+        border-top: 5px solid #333;
+        border-top: 5px solid rgba(0,0,0,.2);
+      {/block:IfNotDarkLayout}
+      {block:IfDarkLayout}
+        border-top: 5px solid #fff;
+        border-top: 5px solid rgba(255,255,255,.2);
+      {/block:IfDarkLayout}
+      padding-top: 10px;
+    }
+      .single .post {
+        float: none;
+        margin: 0 auto;
+        width: 500px;
+      }
+    
+      .post h3 {
+        font-family: "chunk-1","chunk-2", "Rockwell", "American Typewriter", Georgia, serif;
+        font-weight: bold;
+        font-size: 1.5em;
+        {block:IfDropShadowsonPostHeaders}
+          {block:IfNotDarkLayout}
+            text-shadow: 0 2px 0 rgba(0,0,0,.2);
+          {/block:IfNotDarkLayout}
+        {/block:IfDropShadowsonPostHeaders}
+        {block:IfNotDropShadowsonPostHeaders}
+          text-shadow: 0 0 1px {Color:Content Background};
+        {/block:IfNotDropShadowsonPostHeaders}
+        margin-bottom: .75em;
+        color: {color:Post Headers};
+        overflow: hidden;
+      }
+        .post h3 a {
+          color: {color:Post Headers};
+          text-decoration: none;
+        }
+        
+        
+      .post-meta {
+        margin-top: 10px;
+        height: 10px;
+      }
+        .post-meta-left {
+          float: left;
+        }
+        .post-meta-right {
+          float: right;
+        }
+        .post-meta a {
+          text-decoration: none;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          font-size: .83em;
+        }
+      
+    
+      .media {
+        border-top: 0;
+        {block:IfNotDarkLayout}
+          background: #fff;
+          background: rgba(255,255,255,.9);
+        {/block:IfNotDarkLayout}
+        {block:IfDarkLayout}
+          background: #333;
+          background: rgba(0,0,0,.9);
+        {/block:IfDarkLayout}
+        padding: 10px;
+        margin: 0 40px 30px -10px;
+      }
+        .media .text {
+          font-style: italic;
+          padding-top: 10px;
+        }
+        .single img {
+          display: block;
+          margin: 0 auto 20px;
+          max-width: 100%;
+          {block:IfNotDarkLayout}
+            border: 10px solid #fff;
+            border: 10px solid rgba(255,255,255,.9);
+          {/block:IfNotDarkLayout}
+          {block:IfDarkLayout}
+            border: 10px solid #333;
+            border: 10px solid rgba(0,0,0,.9);
+          {/block:IfDarkLayout}
+        }
+        .single .video {
+          width: 500px;
+        }
+          
+      .quote {
+        position: relative;
+        border-top: 0;
+      }
+        .quote.short h3 { font-size: 3em; }
+        .quote.medium h3 { font-size: 2em; }
+        .quote.long h3 { font-size: 1.5em; }
+          .quote big {
+            font-size: 12em;
+            {block:IfNotDarkLayout}
+              color: transparent;
+              color: rgba(0,0,0,.2);
+            {/block:IfNotDarkLayout}
+            {block:IfDarkLayout}
+              color: transparent;
+              color: rgba(255,255,255,.2);
+            {/block:IfDarkLayout}
+            font-family: "American Typewriter", Georgia, serif;
+            position: absolute;
+            top: -.15em;
+            right: -.05em;
+            z-index: -1;
+          }
+          .quote cite {
+            display: block;
+            text-align: right;
+          }
+          
+      .link {
+        padding: 10px;
+        {block:IfNotDarkLayout}
+          background: #333;
+          background: rgba(0,0,0,.1);
+        {/block:IfNotDarkLayout}
+        {block:IfDarkLayout}
+          background: #fff;
+          background: rgba(255,255,255,.1);
+        {/block:IfDarkLayout}
+        margin: 0 40px 30px -10px;
+      }
+        .link h3 {
+          text-shadow: none;
+          margin-bottom: .35em;
+        }
+          .link h3 a {
+            text-decoration: none;
+        		{block:IfNotDarkLayout}
+          		color: rgba(0,0,0,.6);	
+            {/block:IfNotDarkLayout}
+            {block:IfDarkLayout}
+          		color: rgba(255,255,255,.6);	
+            {/block:IfDarkLayout}
+          }
+    
+      .chat {
+        padding: 0;
+        width: 270px;
+        margin: 0 40px 40px -10px;
+      }
+        .chat table {
+          width: 270px;
+          line-height: 1.2;
+        }
+        .chat td,
+        .chat th {
+          padding: 8px 10px 10px;
+        }
+        .chat th {
+          text-align: right;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          font-size: .83em;
+          padding-right: 0;
+        }
+        .chat .user1 th,
+        .chat .user1 td { 
+          {block:IfNotDarkLayout}
+            background: rgba(0,0,0,.1); 
+          {/block:IfNotDarkLayout}
+          {block:IfDarkLayout}
+        		background: rgba(255,255,255,.1);	
+          {/block:IfDarkLayout}
+        }
+        .chat .user2 th,
+        .chat .user2 td {
+          {block:IfNotDarkLayout}
+            background: rgba(0,0,0,.2);
+          {/block:IfNotDarkLayout}
+          {block:IfDarkLayout}
+        		background: rgba(255,255,255,.2);	
+          {/block:IfDarkLayout}
+        }
+        .chat .user3 th,
+        .chat .user3 td {
+          {block:IfNotDarkLayout}
+            background: rgba(0,0,0,.3);
+          {/block:IfNotDarkLayout}
+          {block:IfDarkLayout}
+        		background: rgba(255,255,255,.3);	
+          {/block:IfDarkLayout}
+        }
+        .chat .user4 th,
+        .chat .user4 td {
+          {block:IfNotDarkLayout}
+            background: rgba(0,0,0,.4);
+          {/block:IfNotDarkLayout}
+          {block:IfDarkLayout}
+        		background: rgba(255,255,255,.4);	
+          {/block:IfDarkLayout}
+        }
+        .chat .post-meta { 
+          {block:IfNotDarkLayout}
+            background: rgba(0,0,0,.05); 
+          {/block:IfNotDarkLayout}
+          {block:IfDarkLayout}
+        		background: rgba(255,255,255,.05);	
+          {/block:IfDarkLayout}
+          margin-top: 0;
+          padding: 10px;
+        }
+        
+      .audio {
+        border-top: 0;
+        padding-top: 0;
+        padding-bottom: 0px;
+      }
+        .audio .player {
+          {block:IfNotDarkLayout}
+            background: #fff;
+            background: rgba(255,255,255,.5);
+          {/block:IfNotDarkLayout}
+          {block:IfDarkLayout}
+            background: #333;
+            background: rgba(0,0,0,.5);
+          {/block:IfDarkLayout}
+          text-align: center;
+          padding: 20px 0;
+          margin-bottom: 10px;
+        }
+      
+     .notes {
+      {block:IfNotDarkLayout}
+        border-top: 3px solid #333;
+        border-top: 3px solid rgba(0,0,0,.2);
+      {/block:IfNotDarkLayout}
+      {block:IfDarkLayout}
+        border-top: 3px solid #fff;
+        border-top: 3px solid rgba(255,255,255,.2);
+      {/block:IfDarkLayout}
+      margin-top: 1em;
+    } 
+    
+     .notes li {
+      padding: .75em 0 .9em;
+      {block:IfNotDarkLayout}
+        border-bottom: 1px solid #333;
+        border-bottom: 1px solid rgba(0,0,0,.2);
+      {/block:IfNotDarkLayout}
+      {block:IfDarkLayout}
+        border-bottom: 1px solid #fff;
+        border-bottom: 1px solid rgba(255,255,255,.2);
+      {/block:IfDarkLayout}
+      line-height: 1.35;
+    }
+      .notes img.avatar {
+        display: none;
+      }
+      .notes li a {
+        text-decoration: none;
+      }
+      .notes blockquote {      
+        {block:IfNotDarkLayout}
+          border-left: 2px solid #333;
+      		border-left: 2px solid rgba(0,0,0,.2);
+        {/block:IfNotDarkLayout}
+        {block:IfDarkLayout}
+          border-left: 2px solid #fff;
+      		border-left: 2px solid rgba(255,255,255,.2);
+        {/block:IfDarkLayout}
+    		padding: 0 .5em;
+    		margin: .5em 0 0 .5em;
+      }
+
+    
+    .text {
+      overflow: hidden;
+    }
+    .text em {
+  		font-style: italic;
+  	}
+  	.text strong {
+  		font-weight: bold;
+  	}
+  	.text p,.text blockquote {
+  		line-height: 1.5;
+  		margin: 1.35em 0;
+  		
+  	}
+    .text p:first-of-type {
+      margin-top: 0;
+    }
+    .text p:last-of-type {
+      margin-bottom: 0;
+    }
+  	.text ul,.text ol {
+  		margin: 1.35em 2em;
+  	}
+  		.text ol li {
+  			list-style-type: decimal;
+  		}
+  		.text li {
+  			margin: .75em 0;
+  			line-height: 1.4;
+  			list-style-type: disc;
+  		}
+  		.text ol ol,.text ul ul {
+  			margin: .75em 2em;
+  		}
+  		.text li ol li {
+  			list-style-type: lower-alpha;
+  		}
+  		.text li ul li {
+  			list-style-type: circle;
+  		}
+  	.text blockquote {
+  		padding: 0 1em;
+  		margin-left: 1em;
+  		{block:IfNotDarkLayout}
+  		  border-left: 2px solid #333;
+    		border-left: 2px solid rgba(0,0,0,.2);
+      {/block:IfNotDarkLayout}
+      {block:IfDarkLayout}
+        border-left: 2px solid #fff;
+    		border-left: 2px solid rgba(255,255,255,.2);
+      {/block:IfDarkLayout}
+  		font-style: italic;
+  	}
+    .text img {
+	    max-width: 100%;
+            margin-top: 5px;
+            margin-right: 10px;
+            margin-bottom: 4px;
+            margin-left: 0px;
+    }
+  
+    #disqus_thread {
+      padding-top: 10px;
+    }
+    #disqus_thread h3 {
+      {block:IfNotDarkLayout}
+        color: #333;
+    	 color: rgba(0,0,0,.9);
+      {/block:IfNotDarkLayout}
+      {block:IfDarkLayout}
+        color: #fcfcfc;
+        color: rgba(255,255,255,.9);
+      {/block:IfDarkLayout}
+    }
+    
+    #footer {
+      width: 850px;
+      margin: -20px auto 0;
+      {block:IfNotDarkLayout}
+        border-top: 5px solid #333;
+        border-top: 5px solid rgba(0,0,0,.2);
+      {/block:IfNotDarkLayout}
+      {block:IfDarkLayout}
+        border-top: 5px solid #fff;
+        border-top: 5px solid rgba(255,255,255,.2);
+      {/block:IfDarkLayout}
+      padding: 10px 0 40px;
+      line-height: 1.3;
+    }
+      .footer-center {
+        text-align: center;
+      }
+      .footer-left,
+      .footer-right {
+        font-family: "chunk-1","chunk-2", "Rockwell", "American Typewriter", Georgia, serif;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-top: .2em;
+        text-decoration: none;
+      }
+        .footer-left { float: left; }
+        .footer-right { float: right; }
+	</style>
+	<style type="text/css">{CustomCSS}</style>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+  <script src="http://static.tumblr.com/thpaaos/lLwkowcqm/jquery.masonry.js"></script>
+	<script>	    $(window).load(function () { $('.hellyeah').masonry(); }); </script>
+	{block:IfTypekitCode}{text:Typekit Code}{block:IfTypekitCode}
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-20634549-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+
+</head>
+
+
+<body>
+	
+	<div id="container">
+		
+		<div id="header">
+			
+			<h1>
+                            <a href="/">{Title}</a>
+                            <div style="clear:left;"/>
+                        </h1>
+                        
+			<h2>{Description}</h2>
+			
+			{block:HasPages}
+				<h2 style="margin-top:10px; font-size:1.3em">
+					{block:Pages}<a href="{URL}">{Label}</a>&nbsp;&nbsp;{/block:Pages}
+				</h2>
+			{/block:HasPages}
+			<h2 style="margin-top:10px; font-size:1.3em; display: none; {block:AskEnabled}display: block;{/block:AskEnabled}{block:SubmissionsEnabled}display: block;{/block:SubmissionsEnabled}">
+				{block:AskEnabled}<a href="/ask">{AskLabel}</a>&nbsp;&nbsp;{/block:AskEnabled}
+                {block:SubmissionsEnabled}<a href="/submit">{SubmitLabel}</a>{/block:SubmissionsEnabled}
+			</h2>
+		</div>
+		
+		<div id="content"{block:PermalinkPage} class="single"{/block:PermalinkPage}>
+		<br/>
+			{block:IndexPage}<div class="hellyeah">{/block:IndexPage}
+			
+
+
+			{block:Posts}
+			
+        {block:Photo}
+
+          {block:PermalinkPage}{LinkOpenTag}
+            <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}">
+          {LinkCloseTag}{/block:PermalinkPage}
+        
+          <div class="post media">
+            {block:IndexPage}<a href="{Permalink}">
+              <img src="{PhotoURL-250}" alt="{PhotoAlt}">
+            </a>{/block:IndexPage}
+            {block:Caption}<div class="text">{Caption}</div>{/block:Caption}
+            <div class="post-meta">
+              <span class="post-meta-left"><a href="{Permalink}"></a></span>
+              {block:ifDisqusShortname}<span class="post-meta-right"><a class="dsq-comment-count" href="{Permalink}#disqus_thread">{lang:Comments}</a></span>{/block:IfDisqusShortname}
+            </div>
+            {block:PostNotes}<div class="notecontainer">{PostNotes}</div>{/block:PostNotes}
+            {block:PermalinkPage}
+              {block:IfDisqusShortname}
+                {block:Permalink}
+                <div id="disqus_thread"></div>
+                <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
+                <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">{lang:View the discussion thread}</a></noscript>
+                {/block:Permalink}
+              {/block:IfDisqusShortname}
+            {/block:PermalinkPage}
+          </div>
+
+         
+        {/block:Photo}
+        
+        {block:Video}
+         <div class="post media video">
+           {block:PermalinkPage}{Video-500}{/block:PermalinkPage}
+           {block:IndexPage}{Video-250}{/block:IndexPage}
+           {block:Caption}<div class="text">{Caption}</div>{/block:Caption}
+           <div class="post-meta">
+              <span class="post-meta-left"><a href="{Permalink}"></a></span>
+              {block:ifDisqusShortname}<span class="post-meta-right"><a class="dsq-comment-count" href="{Permalink}#disqus_thread">{lang:Comments}</a></span>{/block:IfDisqusShortname}
+            </div>
+           {block:PostNotes}<div class="notecontainer">{PostNotes}</div>{/block:PostNotes}
+           {block:PermalinkPage}
+             {block:IfDisqusShortname}
+                {block:Permalink}
+                <div id="disqus_thread"></div>
+                <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
+                <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">{lang:View the discussion thread}</a></noscript>
+                {/block:Permalink}
+              {/block:IfDisqusShortname}
+            {/block:PermalinkPage}
+
+         </div>
+        {/block:Video}
+        
+        {block:Audio}
+         <div class="post audio">
+          {block:IfNotDarkLayout}
+            <div class="player">{AudioPlayerWhite}</div>
+          {/block:IfNotDarkLayout}
+          {block:IfDarkLayout}
+            <div class="player">{AudioPlayerBlack}</div>
+          {/block:IfDarkLayout}
+          {block:Caption}<div class="text">{Caption}</div>{/block:Caption}
+           <div class="post-meta">
+              <span class="post-meta-left"><a href="{Permalink}"></a></span>
+              {block:ifDisqusShortname}<span class="post-meta-right"><a class="dsq-comment-count" href="{Permalink}#disqus_thread">{lang:Comments}</a></span>{/block:IfDisqusShortname}
+            </div>
+          {block:PostNotes}<div class="notecontainer">{PostNotes}</div>{/block:PostNotes}
+          {block:PermalinkPage}
+            {block:IfDisqusShortname}
+                {block:Permalink}
+                <div id="disqus_thread"></div>
+                <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
+                <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">{lang:View the discussion thread}</a></noscript>
+                {/block:Permalink}
+              {/block:IfDisqusShortname}
+          {/block:PermalinkPage}
+        </div>
+        {/block:Audio}
+        
+        {block:Quote}
+         <div class="post quote {Length}">
+           <big>&rdquo;</big>
+           <h3><a href="{Permalink}">{Quote}</a></h3>
+           {block:Source}<div class="text">{Source}</div>{/block:Source}
+           <div class="post-meta">
+              <span class="post-meta-left"><a href="{Permalink}"></a></span>
+              {block:ifDisqusShortname}<span class="post-meta-right"><a class="dsq-comment-count" href="{Permalink}#disqus_thread">{lang:Comments}</a></span>{/block:IfDisqusShortname}
+            </div>
+           {block:PostNotes}<div class="notecontainer">{PostNotes}</div>{/block:PostNotes}
+           {block:PermalinkPage}
+             {block:IfDisqusShortname}
+                {block:Permalink}
+                <div id="disqus_thread"></div>
+                <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
+                <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">{lang:View the discussion thread}</a></noscript>
+                {/block:Permalink}
+              {/block:IfDisqusShortname}
+          {/block:PermalinkPage}
+         </div>
+        {/block:Quote}
+        
+        {block:PermalinkPage}
+            {block:Text}
+ <div class="post">
+            {block:Title}<h3><a href="{Permalink}">{Title}</a></h3>{/block:Title}
+            <div class="text">{Body}</div>
+            <div class="post-meta">
+              <span class="post-meta-left"><a href="{Permalink}"></a></span>
+              {block:ifDisqusShortname}<span class="post-meta-right"><a class="dsq-comment-count" href="{Permalink}#disqus_thread">{lang:Comments}</a></span>{/block:IfDisqusShortname}
+            </div>
+            {block:PostNotes}<div class="notecontainer">{PostNotes}</div>{/block:PostNotes}
+            {block:PermalinkPage}
+              {block:IfDisqusShortname}
+                {block:Permalink}
+                <div id="disqus_thread"></div>
+                <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
+                <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">{lang:View the discussion thread}</a></noscript>
+                {/block:Permalink}
+              {/block:IfDisqusShortname}
+            {/block:PermalinkPage}
+          </div>
+            {/block:Text}
+        {/block:PermalinkPage}
+{block:IndexPage}
+        {block:HasTags}
+          <div class="post">
+            {block:Title}<h3><a href="{Permalink}">{Title}</a></h3>{/block:Title}
+            <div class="text">{Body}</div>
+            <div class="post-meta">
+              <span class="post-meta-left"><a href="{Permalink}"></a></span>
+              {block:ifDisqusShortname}<span class="post-meta-right"><a class="dsq-comment-count" href="{Permalink}#disqus_thread">{lang:Comments}</a></span>{/block:IfDisqusShortname}
+            </div>
+            {block:PostNotes}<div class="notecontainer">{PostNotes}</div>{/block:PostNotes}
+            {block:PermalinkPage}
+              {block:IfDisqusShortname}
+                {block:Permalink}
+                <div id="disqus_thread"></div>
+                <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
+                <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">{lang:View the discussion thread}</a></noscript>
+                {/block:Permalink}
+              {/block:IfDisqusShortname}
+            {/block:PermalinkPage}
+          </div>
+        {/block:HasTags}
+
+   {/block:IndexPage}     
+        {block:Chat}
+          <div class="post chat">
+            <table cellspacing="0">
+              {block:Lines}
+                <tr class="user{UserNumber}">
+                  <th>{block:Label}{Label}{/block:Label}</th>
+                  <td>{Line}</td>
+                </tr>
+              {/block:Lines}
+            </table>
+            <div class="post-meta">
+              <span class="post-meta-left"><a href="{Permalink}">{TimeAgo}</a></span>
+              {block:ifDisqusShortname}<span class="post-meta-right"><a class="dsq-comment-count" href="{Permalink}#disqus_thread">{lang:Comments}</a></span>{/block:IfDisqusShortname}
+            </div>
+            {block:PostNotes}<div class="notecontainer">{PostNotes}</div>{/block:PostNotes}
+            {block:PermalinkPage}
+              {block:IfDisqusShortname}
+                {block:Permalink}
+                <div id="disqus_thread"></div>
+                <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
+                <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">{lang:View the discussion thread}</a></noscript>
+                {/block:Permalink}
+              {/block:IfDisqusShortname}
+            {/block:PermalinkPage}
+          </div>
+        {/block:Chat}
+        
+        {block:Link}
+          <div class="post link">
+            <h3><a href="{URL}" {Target}>{Name}</a></h3>
+            {block:Description}<div class="text">{Description}</div>{/block:Description}
+            <div class="post-meta">
+              <span class="post-meta-left"><a href="{Permalink}"></a></span>
+              {block:ifDisqusShortname}<span class="post-meta-right"><a class="dsq-comment-count" href="{Permalink}#disqus_thread">{lang:Comments}</a></span>{/block:IfDisqusShortname}
+            </div>
+            {block:PostNotes}<div class="notecontainer">{PostNotes}</div>{/block:PostNotes}
+            {block:PermalinkPage}
+              {block:IfDisqusShortname}
+                {block:Permalink}
+                <div id="disqus_thread"></div>
+                <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
+                <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">{lang:View the discussion thread}</a></noscript>
+                {/block:Permalink}
+              {/block:IfDisqusShortname}
+            {/block:PermalinkPage}
+          </div>
+        {/block:Link}
+    			
+			{/block:Posts}
+
+<div class="clear"></div>
+
+{block:IndexPage}
+
+<div id="paypal" style=" float: right; padding: 10px; margin: 0 40px 30px 0;">
+<div class="text">
+<p>Please send us money via Paypal!</p>
+</div>
+<br/>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="3932S2AUQN3BJ">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+</div>
+
+<div style="clear: right;"/>
+
+
+</div> <!-- keep this extra div -->
+
+{/block:IndexPage}			
+			
+			
+		</div>
+		
+		<div id="footer">
+		  {block:Pagination}
+  		  {block:NextPage}<a href="{NextPage}" class="footer-right">{lang:Older posts}</a>{/block:NextPage}
+  		  {block:PreviousPage}<a href="{PreviousPage}" class="footer-left">{lang:Newer posts}</a>{/block:PreviousPage}
+		  {/block:Pagination}
+{block:IndexPage}
+<div class="text">
+<p> For the best Comedy in <strong> twin cities </strong> <strong> Minneapolis </strong> <strong> St Paul </strong> area.</p>
+<br/>
+</div>
+{/block:IndexPage}
+		  <div class="footer-center"><a href="{RSS}">{lang:Subscribe via RSS}</a>. Designed by <a href="http://www.thecornerbar.tumblr.com/">Comedy</a>.</div>
+		</div>
+
+	</div>
+	
+	{block:IfDisqusShortname}
+    <script type="text/javascript">
+    //<![CDATA[
+        (function () {
+            var links = document.getElementsByTagName('a');
+            var query = '?';
+            for (var i = 0; i < links.length; i++) {
+                if (links[i].href.indexOf('#disqus_thread') >= 0) {
+                    query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+                }
+            }
+            document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/get_num_replies.js' + query + '"></' + 'script>');
+        })();
+    //]]>
+    </script>
+    {/block:IfDisqusShortname}
+	
+</body>
+
+</html>
