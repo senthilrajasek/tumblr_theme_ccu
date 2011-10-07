@@ -702,8 +702,7 @@ font-weight:bold;
           </div>
             {/block:Text}
         {/block:PermalinkPage}
-{block:IndexPage}
-        {block:HasTags}
+        {block:IndexPage}
           <div class="post">
             {block:Title}<h3><a href="{Permalink}">{Title}</a></h3>{/block:Title}
             <div class="text">{Body}</div>
@@ -722,9 +721,7 @@ font-weight:bold;
               {/block:IfDisqusShortname}
             {/block:PermalinkPage}
           </div>
-        {/block:HasTags}
-
-   {/block:IndexPage}     
+        {/block:IndexPage}     
         {block:Chat}
           <div class="post chat">
             <table cellspacing="0">
