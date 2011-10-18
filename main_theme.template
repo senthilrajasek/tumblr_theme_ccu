@@ -596,6 +596,7 @@ font-weight:bold;
 				<g:plusone size="small"></g:plusone>
 				<a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="theccu">Tweet</a>
 				<script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+				<script type="text/javascript" src="http://www.reddit.com/buttonlite.js?i=5"></script>
 			</div>
 
 			  {block:IfDisqusShortname}
