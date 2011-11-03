@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!--
 Chunky Theme 1.3 by Sleepover.
 Released under Creative Commons Attribution-Noncommercial-Share Alike 3.0 Unported License
@@ -18,10 +18,9 @@ http://creativecommons.org/licenses/by-nc-sa/3.0/
 	
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<title>{block:PostTitle}{PostTitle} | {/block:PostTitle}Comedy Corner Underground a Minneapolis Comedy Club run by Comics</title>
+	<title>{block:PostTitle}{PostTitle} | {/block:PostTitle}Comedy Corner Underground Blog</title>
 	{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
 	<link rel="shortcut icon" href="{Favicon}" />
-	<link rel="canonical" href="{Permalink}"/>
   <link rel="alternate" type="application/rss+xml" href="{RSS}" />
   <meta name="color:Header Background" content="#000000" />
   <meta name="color:Header Text" content="#FFFFFF" />
@@ -141,7 +140,7 @@ font-weight:bold;
     }
     
     .post {
-      width: 250px;
+      width: 500px;
       float: left;
       margin: 0 50px 20px 0;
       {block:IfNotDarkLayout}
@@ -176,16 +175,11 @@ font-weight:bold;
         color: {color:Post Headers};
         overflow: hidden;
       }
-      
-	  .post h3 a {
+        .post h3 a {
           color: {color:Post Headers};
           text-decoration: none;
-		  }
-
-       .share_buttons {
-		margin-bottom: .75em;
-	   }
-
+        }
+        
         
       .post-meta {
         margin-top: 10px;
@@ -529,35 +523,42 @@ font-weight:bold;
 	<style type="text/css">{CustomCSS}</style>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
   <script src="http://static.tumblr.com/thpaaos/lLwkowcqm/jquery.masonry.js"></script>
-	<script>	    $(window).load(function () { $('.hellyeah').masonry(); }); </script>
+	<script>$(window).load(function () { $('.hellyeah').masonry(); }); </script>
 	{block:IfTypekitCode}{text:Typekit Code}{block:IfTypekitCode}
 
 
 <script type="text/javascript">
 
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-20634549-1']);
-    _gaq.push(['_trackPageview']);
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20634549-1']);
+  _gaq.push(['_trackPageview']);
 
-    (function () {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
 
 </script>
 
+
+
 </head>
+
+
 <body>
+	
 	<div id="container">
+		
 		<div id="header">
+			
 			<h1>
-                 <a href="http://www.comedycornerunderground.com">{Title}</a>
-                 <div style="clear:left;"/>
-			</h1>
+                            <a href="http://www.comedycornerunderground.com">{Title}</a>
+                            <div style="clear:left;"/>
+                        </h1>
                         
 			<h2>{Description}</h2>
-
+			
 			{block:HasPages}
 				<h2 style="margin-top:10px; font-size:1.3em">
 					{block:Pages}<a href="{URL}">{Label}</a>&nbsp;&nbsp;{/block:Pages}
@@ -571,9 +572,11 @@ font-weight:bold;
 		
 		<div id="content"{block:PermalinkPage} class="single"{/block:PermalinkPage}>
 		<br/>
-		{block:IndexPage}<div class="hellyeah">{/block:IndexPage}
-		
-		{block:Posts}
+			{block:IndexPage}<div class="hellyeah">{/block:IndexPage}
+			
+
+
+			{block:Posts}
 			
         {block:Photo}
 
@@ -592,33 +595,13 @@ font-weight:bold;
             </div>
             {block:PostNotes}<div class="notecontainer">{PostNotes}</div>{/block:PostNotes}
             {block:PermalinkPage}
-            <div class="share_buttons">
-				<g:plusone size="small"></g:plusone>
-				<a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="theccu">Tweet</a>
-				<script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
-                <script type="text/javascript" src="http://www.reddit.com/buttonlite.js?i=5"></script>
-			</div>
-
-			  {block:IfDisqusShortname}
+              {block:IfDisqusShortname}
                 {block:Permalink}
                 <div id="disqus_thread"></div>
                 <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
                 <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">{lang:View the discussion thread}</a></noscript>
                 {/block:Permalink}
               {/block:IfDisqusShortname}
-			
-			<!-- This is for the g+ stuff -->
-			  <script type="text/javascript">
-				(function() {
-								var po = document.createElement('script'); 
-								po.type = 'text/javascript'; 
-								po.async = true;
-								po.src = 'https://apis.google.com/js/plusone.js';
-								var s = document.getElementsByTagName('script')[0]; 
-								s.parentNode.insertBefore(po, s);
-						})();
-			</script>
-
             {/block:PermalinkPage}
           </div>
 
@@ -698,13 +681,8 @@ font-weight:bold;
         
         {block:PermalinkPage}
             {block:Text}
-			<div class="post">
+ <div class="post">
             {block:Title}<h3><a href="{Permalink}">{Title}</a></h3>{/block:Title}
-			<div class="share_buttons">
-				<g:plusone size="small"></g:plusone>
-				<a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="theccu">Tweet</a>
-				<script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
-			</div>
             <div class="text">{Body}</div>
             <div class="post-meta">
               <span class="post-meta-left"><a href="{Permalink}"></a></span>
@@ -719,25 +697,17 @@ font-weight:bold;
                 <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">{lang:View the discussion thread}</a></noscript>
                 {/block:Permalink}
               {/block:IfDisqusShortname}
-			  <!-- This is for the g+ stuff -->
-			  <script type="text/javascript">
-				(function() {
-								var po = document.createElement('script'); 
-								po.type = 'text/javascript'; 
-								po.async = true;
-								po.src = 'https://apis.google.com/js/plusone.js';
-								var s = document.getElementsByTagName('script')[0]; 
-								s.parentNode.insertBefore(po, s);
-						})();
-				</script>
             {/block:PermalinkPage}
           </div>
             {/block:Text}
         {/block:PermalinkPage}
-        {block:IndexPage}
+{block:IndexPage}
           <div class="post">
             {block:Title}<h3><a href="{Permalink}">{Title}</a></h3>{/block:Title}
-            <div class="text">{Body}</div>
+
+            <div class="text">{Body}         
+            </div>
+
             <div class="post-meta">
               <span class="post-meta-left"><a href="{Permalink}"></a></span>
               {block:ifDisqusShortname}<span class="post-meta-right"><a class="dsq-comment-count" href="{Permalink}#disqus_thread">{lang:Comments}</a></span>{/block:IfDisqusShortname}
@@ -753,7 +723,8 @@ font-weight:bold;
               {/block:IfDisqusShortname}
             {/block:PermalinkPage}
           </div>
-        {/block:IndexPage}     
+
+   {/block:IndexPage}     
         {block:Chat}
           <div class="post chat">
             <table cellspacing="0">
@@ -805,28 +776,6 @@ font-weight:bold;
 			{/block:Posts}
 
 <div class="clear"></div>
-
-{block:IndexPage}
-
-<div id="paypal" style=" float: right; padding: 10px; margin: 0 40px 30px 0;">
-<div class="text">
-<p>Please send us money via Paypal!</p>
-</div>
-<br/>
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="3932S2AUQN3BJ">
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-</form>
-</div>
-
-<div style="clear: right;"/>
-
-
-</div> <!-- keep this extra div -->
-
-{/block:IndexPage}			
 			
 			
 		</div>
@@ -850,16 +799,16 @@ font-weight:bold;
 	{block:IfDisqusShortname}
     <script type="text/javascript">
     //<![CDATA[
-        (function () {
-            var links = document.getElementsByTagName('a');
-            var query = '?';
-            for (var i = 0; i < links.length; i++) {
-                if (links[i].href.indexOf('#disqus_thread') >= 0) {
-                    query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
-                }
-            }
-            document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/get_num_replies.js' + query + '"></' + 'script>');
-        })();
+    (function() {
+        var links = document.getElementsByTagName('a');
+        var query = '?';
+        for(var i = 0; i < links.length; i++) {
+        if(links[i].href.indexOf('#disqus_thread') >= 0) {
+            query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+        }
+        }
+        document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/get_num_replies.js' + query + '"></' + 'script>');
+    })();
     //]]>
     </script>
     {/block:IfDisqusShortname}
