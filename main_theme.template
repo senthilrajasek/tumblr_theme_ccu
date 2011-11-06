@@ -137,7 +137,7 @@ font-weight:bold;
     #content {
       width: 900px;
       margin: 0 auto;
-      padding: 50px 0 50px 50px;
+      padding: 25px 0 50px 50px;
     }
     
     .post {
@@ -570,7 +570,6 @@ font-weight:bold;
 		</div>
 		
 		<div id="content"{block:PermalinkPage} class="single"{/block:PermalinkPage}>
-		<br/>
 		{block:IndexPage}<div class="hellyeah">{/block:IndexPage}
 		
 		{block:Posts}
